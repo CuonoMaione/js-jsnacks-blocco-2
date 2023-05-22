@@ -1,23 +1,28 @@
 const randomNumber = Math.floor(Math.random() *100 );
-console.log(randomNumber);
+
 
 let userNumber = parseInt(prompt("insert number"))
 
-while (randomNumber != userNumber) {
-   
-  userNumber = prompt("insert number");
+let i = 1;
 
-  
+while (randomNumber != userNumber) {
+     
   if (userNumber > randomNumber) {
 
-    console.log("Il numero che hai inserito è maggiore del numero da indovinare")
+    console.log("il numero è troppo alto")
     
   } else if (userNumber < randomNumber) {
 
-    console.log("Il numero che hai inserito è minore del numero da indovinare")
+    console.log("il numero è troppo basso")
     
   }
+
+  userNumber = prompt("insert number");
   
+  i++
+
 }
+
+console.log("il numero di tentativo è = " + i);
 
 console.log("hai vinto")
